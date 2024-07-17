@@ -66,9 +66,9 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | `submission_period`| Daterange filter defining in which range the intervention was published. None values are treated as unfiltered (=any date into the past or future). | ['2020-01-01', None] | Unfiltered |
 | `in_force_on_date`| A single datestring value defining a date on which the intervention was in force. | '2020-01-01' | Unfiltered |
 | `keep_in_force_on_date`| Boolean filter defining if interventions that were in force on that date should be in- or excluded | True/False | True |
-| `affected_sectors`| Filters by a list of CPC sector codes, accepted values are CPC sector codes, multiple possible | [123, 234, 345] | Unfiltered |
+| `affected_sectors`| Filters by a list of CPC sector codes, accepted values are CPC sector codes, multiple possible | [341, 352, 379] | Unfiltered |
 | `keep_affected_sectors`| Boolean filter defining if chosen CPC sectors should be in- or excluded | True/False | True |
-| `affected_products`| Filters by a list of HS codes, accepted values are HS product codes, multiple possible | [123456, 234567, 345789] | Unfiltered |
+| `affected_products`| Filters by a list of HS codes, accepted values are HS product codes, multiple possible | [292149, 292229, 292429] | Unfiltered |
 | `keep_affected_products`| Boolean filter defining if chosen hs codes should be in- or excluded | True/False | True |
 | `intervention_id`| Filters by a list of intervention_ids directly, multiple possible | [123456, 234567, 345678] | Unfiltered |
 | `keep_intervention_id`| Boolean filter defining if chosen intervention ids should be in- or excluded | True/False | True |
@@ -161,9 +161,9 @@ The format of the data being returned looks like this:
 
 ## Pagination
 
-The Data endpoints allows to return a maximum of 1000 entries per request. Use the limit and offset parameters to paginate through the output.
+The Data endpoint allows to return a maximum of 1000 entries per request. Use the `limit` and `offset` parameters to paginate through the output.
 
-I.e. to get the first 1000 entries, set the limit to 1000 and the offset to 0. To get the next 1000 entries, set the limit to 1000 and the offset to 1000, and so forth.
+I.e. to get the first 1000 entries, set the `limit` to 1000 and the `offset` to 0. To get the next 1000 entries, set the `limit` to 1000 and the `offset` to 1000, and so forth.
 
 No entries are returned if the offset is higher than the total number of entries matching the request filters.
 
