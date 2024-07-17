@@ -15,5 +15,5 @@ API access is currently in beta, and not publicly available yet. The following a
 ### GTA Data
 
 GTA Data access allows to extract lists of policies from the GTA database filtered by different criteria.
-[See documentation](https://github.com/global-trade-alert/docs/.api/data.md)
+[See documentation](.api/data.md)
 
