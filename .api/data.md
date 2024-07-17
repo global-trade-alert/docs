@@ -29,7 +29,7 @@ The request body can contain the following parameters:
     "offset": 0,
     "sorting": "-date_announced",
     "request_data": { 
-        "implementation_level": [1,2],
+        "affected": [32, 840],
         "implementation_period": ["2023-01-01", ""],
         "in_force_today": true,
         ...
@@ -54,26 +54,11 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | :--- | :--- | :--- | :--- |
 | `gta_evaluation`| Filters by evaluation value, accepted are values from 1 (Red), 2 (Amber), 3 (Green), 4 (Harmful), 5 (Liberalising), multiple possible. Evaluations determine if an intervention is harmful, liberalising or murky (unclear). | [1,2,3] | Unfiltered |
 | `affected_flow`| Filters by affected flow value, accepted are 1 (Inward), 2 (Outward), 3 (Outward subsidy), multiple possible. Affected flows determine the trade flow, that an intervention affects. | [1,2,3] | Unfiltered |
-| `commercial_flow`| Coming soon | - | - |
 | `keep_commercial_flow`| Coming soon | True/False | True |
 | `affected`| Filters by affected jurisdictions, accepted values are UN country codes, multiple possible. | [4, 32, 840] | Unfiltered |
 | `keep_affected`| Boolean filter defining if chosen commercial flow values should be in- or excluded | True/False | True |
-| `nr_affected`| Coming soon | - | - |
-| `nr_affected_incl`| Coming soon | - | - |
-| `affected_strictness`| Coming soon | - | - |
-| `keep_others`| Coming soon | - | - |
 | `implementer`| Filters by implementing jurisdiction, accepted values are UN country codes, multiple possible.  | [4, 32, 840] | Unfiltered |
 | `keep_implementer`| Boolean filter defining if chosen implementing jurisdiction values should be in- or excluded | True/False | True |
-| `exporter`| Coming soon | - | - |
-| `keep_exporter`| Coming soon | - | - |
-| `exporter_strictness`| Coming soon | - | - |
-| `nr_exporter`| Coming soon | - | - |
-| `nr_exporter_incl`| Coming soon | - | - |
-| `importer`| Coming soon | - | - |
-| `keep_importer`| Coming soon | - | - |
-| `importer_strictness`| Coming soon | - | - |
-| `nr_importer`| Coming soon | - | - |
-| `nr_importer_incl`| Coming soon | - | - |
 | `announcement_period`| Daterange filter defining in which range the intervention was announced. None values are treated as unfiltered (=any date into the past or future). | ['2020-01-01', None] | Unfiltered |
 | `implementation_period`| Daterange filter defining in which range the intervention was implemented. None values are treated as unfiltered (=any date into the past or future). | ['2020-01-01', None] | Unfiltered |
 | `keep_implementation_na`| Boolean filter defining if interventions with no implementation date should be in- or excluded | True/False | True |
@@ -82,16 +67,6 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | `submission_period`| Daterange filter defining in which range the intervention was published. None values are treated as unfiltered (=any date into the past or future). | ['2020-01-01', None] | Unfiltered |
 | `in_force_on_date`| A single datestring value defining a date on which the intervention was in force. | '2020-01-01' | Unfiltered |
 | `keep_in_force_on_date`| Boolean filter defining if interventions that were in force on that date should be in- or excluded | True/False | True |
-| `intervention_types`| Coming soon | - | - |
-| `keep_intervention_types`| Coming soon | - | - |
-| `mast_chapters`| Coming soon | - | - |
-| `keep_mast_chapters`| Coming soon | - | - |
-| `implementation_level`| Coming soon | - | - |
-| `keep_implementation_level`| Coming soon | - | - |
-| `eligible_firms`| Coming soon | - | - |
-| `keep_eligible_firms`| Coming soon | - | - |
-| `rationals`| Coming soon | - | - |
-| `keep_rationals`| Coming soon | - | - |
 | `affected_sectors`| Filters by a list of CPC sector codes, accepted values are CPC sector codes, multiple possible | [123, 234, 345] | Unfiltered |
 | `keep_affected_sectors`| Boolean filter defining if chosen CPC sectors should be in- or excluded | True/False | True |
 | `affected_sector_groups`| Coming soon | - | - |
