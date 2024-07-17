@@ -72,7 +72,7 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | `keep_affected_products`| Boolean filter defining if chosen hs codes should be in- or excluded | True/False | True |
 | `intervention_id`| Filters by a list of intervention_ids directly, multiple possible | [123456, 234567, 345678] | Unfiltered |
 | `keep_intervention_id`| Boolean filter defining if chosen intervention ids should be in- or excluded | True/False | True |
-| `lag_adjustment`| Datestring that filters interventions based on a lag date. Interventions with publishing date after the yearly lag date are excluded. The year component of this datevalue is ignored. | '2023-03-05' | None |
+| `lag_adjustment`| Datestring that filters interventions based on a lag date. Interventions with publishing date after the yearly lag date are excluded. The year component of this datevalue is ignored. | '2023-03-05' | Unfiltered |
 
 ## Output
 The format of the data being returned looks like this:
