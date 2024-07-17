@@ -54,7 +54,6 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | :--- | :--- | :--- | :--- |
 | `gta_evaluation`| Filters by evaluation value, accepted are values from 1 (Red), 2 (Amber), 3 (Green), 4 (Harmful), 5 (Liberalising), multiple possible. Evaluations determine if an intervention is harmful, liberalising or murky (unclear). | [1,2,3] | Unfiltered |
 | `affected_flow`| Filters by affected flow value, accepted are 1 (Inward), 2 (Outward), 3 (Outward subsidy), multiple possible. Affected flows determine the trade flow, that an intervention affects. | [1,2,3] | Unfiltered |
-| `keep_commercial_flow`| Coming soon | True/False | True |
 | `affected`| Filters by affected jurisdictions, accepted values are UN country codes, multiple possible. | [4, 32, 840] | Unfiltered |
 | `keep_affected`| Boolean filter defining if chosen commercial flow values should be in- or excluded | True/False | True |
 | `implementer`| Filters by implementing jurisdiction, accepted values are UN country codes, multiple possible.  | [4, 32, 840] | Unfiltered |
@@ -69,12 +68,8 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | `keep_in_force_on_date`| Boolean filter defining if interventions that were in force on that date should be in- or excluded | True/False | True |
 | `affected_sectors`| Filters by a list of CPC sector codes, accepted values are CPC sector codes, multiple possible | [123, 234, 345] | Unfiltered |
 | `keep_affected_sectors`| Boolean filter defining if chosen CPC sectors should be in- or excluded | True/False | True |
-| `affected_sector_groups`| Coming soon | - | - |
-| `keep_affected_sector_groups`| Coming soon | - | - |
 | `affected_products`| Filters by a list of HS codes, accepted values are HS product codes, multiple possible | [123456, 234567, 345789] | Unfiltered |
 | `keep_affected_products`| Boolean filter defining if chosen hs codes should be in- or excluded | True/False | True |
-| `affected_product_groups`| Coming soon | - | - |
-| `keep_affected_product_groups`| Coming soon | - | - |
 | `intervention_id`| Filters by a list of intervention_ids directly, multiple possible | [123456, 234567, 345678] | Unfiltered |
 | `keep_intervention_id`| Boolean filter defining if chosen intervention ids should be in- or excluded | True/False | True |
 | `lag_adjustment`| Datestring that filters interventions based on a lag date. Interventions with publishing date after the yearly lag date are excluded. The year component of this datevalue is ignored. | '2023-03-05' | None |
