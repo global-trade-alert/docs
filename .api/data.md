@@ -42,7 +42,7 @@ The request body can contain the following parameters:
 | `limit` | Set the size of the result set here. Accepted is any number between 0 and 1000 |
 | `offset` | Use this parameter to paginate through the output, it accepts any number. |
 | `sorting` | Set define the parameters you would like to sort the output by, accepted are `date_announced`, `date_implemented`. Combine multiple order clauses together in the same string by separating them via a comma, like `date_announced,date_implemented`. Reverse the order by adding a `-` in front of the order clause you want to reverse like `-date_announced` |
-| `request_data` | This parameter accepts an object containing the key-values pairs you want to filter the output by. See accepted filters in the [Accepted filters](#accepted-filters) section. |
+| `request_data` | This parameter accepts an object containing the key-value pairs used as filters. See accepted filters in the [Accepted filters](#accepted-filters) section. |
 
 
 ### Accepted filters
