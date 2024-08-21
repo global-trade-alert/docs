@@ -1,4 +1,4 @@
-# Data endpoint<!-- omit from toc --> 
+# GTA Data endpoint<!-- omit from toc --> 
 
 The Data endpoint allows to extract paginated lists of policies from the GTA database filtered by different criteria. 
 
