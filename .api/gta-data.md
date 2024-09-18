@@ -61,7 +61,7 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | `keep_intervention_types`| Boolean filter defining if chosen intervention types should be in- or excluded | True/False | True |
 | `mast_chapters`| Filters by a list of mast chapters, multiple possible. [See accepted values here](./gta-value-mappings.md#mast-chapters) | [1,2,3] | None |
 | `keep_mast_chapters`| Boolean filter defining if chosen mast chapter values should be in- or excluded | True/False | True |
-| `implementation_level`| Filters by a list of implementation levels, multiple possible. [See accepted values here](./gta-value-mappings.md#implementation-level) | [1,2,3] | None |
+| `implementation_level`| Filters by a list of implementation levels, multiple possible. [See accepted values here](./gta-value-mappings.md#implementation-levels) | [1,2,3] | None |
 | `keep_implementation_level`| Boolean filter defining if chosen implementation levels values should be in- or excluded | True/False | True |
 | `eligible_firms`| Filters by a list of eligible firm values, multiple possible. [See accepted values here](./gta-value-mappings.md#eligible-firms) | [1,2,3] | None |
 | `keep_eligible_firms`| Boolean filter defining if chosen eligible firms values should be in- or excluded | True/False | True |
