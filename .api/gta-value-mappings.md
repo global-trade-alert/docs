@@ -3,20 +3,15 @@
 This file contains the value-id mappings for the different filters accepted by the GTA data endpoint.
 
 ## Table of contents<!-- omit from toc --> 
-- [Value id mappings](#value-id-mappings)
-  - [Jurisdictions](#jurisdictions)
-  - [GTA Evaluation](#gta-evaluation)
-  - [Affected flows](#affected-flows)
-  - [Intervention types](#intervention-types)
-  - [MAST chapters](#mast-chapters)
-  - [Eligible firms](#eligible-firms)
-  - [Implementation levels](#implementation-levels)
+- [Jurisdictions](#jurisdictions)
+- [GTA Evaluation](#gta-evaluation)
+- [Affected flows](#affected-flows)
+- [Intervention types](#intervention-types)
+- [MAST chapters](#mast-chapters)
+- [Eligible firms](#eligible-firms)
+- [Implementation levels](#implementation-levels)
 
-## Value id mappings
-
-In this section you can find id values for the different filters accepted by the endpoint.
-
-### Jurisdictions
+## Jurisdictions
 | Value | ID |
 | :--- | :--- |
 | Afghanistan | 4 |
@@ -254,7 +249,7 @@ In this section you can find id values for the different filters accepted by the
 | Zambia | 894 |
 | Republic of Kosovo | 999 |
 
-### GTA Evaluation
+## GTA Evaluation
 | Value | ID |
 | :--- | :--- |
 | Red | 1 |
@@ -263,14 +258,14 @@ In this section you can find id values for the different filters accepted by the
 | Harmful | 4 |
 | Liberalising | 5 |
 
-### Affected flows
+## Affected flows
 | Value | ID |
 | :--- | :--- |
 | Inward | 1 |
 | Outward | 2 |
 | Outward subsidy | 3 |
 
-### Intervention types
+## Intervention types
 | Value | ID |
 | :--- | :--- |
 | Capital injection and equity stakes (including bailouts) | 1 |
@@ -342,7 +337,7 @@ In this section you can find id values for the different filters accepted by the
 | Local labour incentive | 67 |
 | Localisation, nes | 68 |
 
-### MAST chapters
+## MAST chapters
 | Value | ID |
 | :--- | :--- |
 | A: Sanitary and phytosanitary measure | 1 |
@@ -363,7 +358,7 @@ In this section you can find id values for the different filters accepted by the
 | Instrument unclear | 16 |
 | C: Pre-shipment inspection and other formalities | 17 |
 
-### Eligible firms
+## Eligible firms
 | Value | ID |
 | :--- | :--- |
 | all | 1 |
@@ -375,7 +370,7 @@ In this section you can find id values for the different filters accepted by the
 | location-specific | 7 |
 | processing trade | 8 |
 
-### Implementation levels
+## Implementation levels
 | Value | ID |
 | :--- | :--- |
 | Supranational | 1 |
