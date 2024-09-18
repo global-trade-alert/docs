@@ -49,15 +49,22 @@ The request body can contain the following parameters:
 
 The Data endpoint accepts a variety of filters to narrow down the output.
 
-
 | Parameter | Description | Example | Default |
 | :--- | :--- | :--- | :--- |
-| `gta_evaluation`| Filters by evaluation value, accepted are values from 1 (Red), 2 (Amber), 3 (Green), 4 (Harmful), 5 (Liberalising), multiple possible. Evaluations determine if an intervention is harmful, liberalising or murky (unclear). | [1,2,3] | Unfiltered |
-| `affected_flow`| Filters by affected flow value, accepted are 1 (Inward), 2 (Outward), 3 (Outward subsidy), multiple possible. Affected flows determine the trade flow, that an intervention affects. | [1,2,3] | Unfiltered |
-| `affected`| Filters by affected jurisdictions, accepted values are UN country codes, multiple possible. | [4, 32, 840] | Unfiltered |
+| `gta_evaluation`| Filters by evaluation value, multiple possible. Evaluations determine if an intervention is harmful, liberalising or murky (unclear). [See accepted values here](./gta-value-mappings.md#gta-evaluation) | [1,2,3] | Unfiltered |
+| `affected_flow`| Filters by affected flow value, multiple possible. Affected flows determine the trade flow, that an intervention affects. [See accepted values here](./gta-value-mappings.md#affected-flows) | [1,2,3] | Unfiltered |
+| `affected`| Filters by affected jurisdictions, accepted values are UN country codes, multiple possible. [See accepted values here](./gta-value-mappings.md#jurisdictions) | [4, 32, 840] | Unfiltered |
 | `keep_affected`| Boolean filter defining if chosen commercial flow values should be in- or excluded | True/False | True |
-| `implementer`| Filters by implementing jurisdiction, accepted values are UN country codes, multiple possible.  | [4, 32, 840] | Unfiltered |
+| `implementer`| Filters by implementing jurisdiction, accepted values are UN country codes, multiple possible. [See accepted values here](./gta-value-mappings.md#jurisdictions) | [4, 32, 840] | Unfiltered |
 | `keep_implementer`| Boolean filter defining if chosen implementing jurisdiction values should be in- or excluded | True/False | True |
+| `intervention_types`| Filters by a list of intervention types directly, multiple possible. [See accepted values here](./gta-value-mappings.md#intervention-types) | [1,2,3] | None |
+| `keep_intervention_types`| Boolean filter defining if chosen intervention types should be in- or excluded | True/False | True |
+| `mast_chapters`| Filters by a list of mast chapters, multiple possible. [See accepted values here](./gta-value-mappings.md#mast-chapters) | [1,2,3] | None |
+| `keep_mast_chapters`| Boolean filter defining if chosen mast chapter values should be in- or excluded | True/False | True |
+| `implementation_level`| Filters by a list of implementation levels, multiple possible. [See accepted values here](./gta-value-mappings.md#implementation-level) | [1,2,3] | None |
+| `keep_implementation_level`| Boolean filter defining if chosen implementation levels values should be in- or excluded | True/False | True |
+| `eligible_firms`| Filters by a list of eligible firm values, multiple possible. [See accepted values here](./gta-value-mappings.md#eligible-firms) | [1,2,3] | None |
+| `keep_eligible_firms`| Boolean filter defining if chosen eligible firms values should be in- or excluded | True/False | True |
 | `announcement_period`| Daterange filter defining in which range the intervention was announced. None values are treated as unfiltered (=any date into the past or future). | ['2020-01-01', None] | Unfiltered |
 | `implementation_period`| Daterange filter defining in which range the intervention was implemented. None values are treated as unfiltered (=any date into the past or future). | ['2020-01-01', None] | Unfiltered |
 | `keep_implementation_na`| Boolean filter defining if interventions with no implementation date should be in- or excluded | True/False | True |
