@@ -382,76 +382,36 @@ In this section you can find id values for the different filters accepted by the
 The format of the data being returned looks like this:
 
 ```
-{
-  "count": 23,
-  "events_count": 55,
-  "next": "http://api.globaltradealert.org/dpa/intervention/url-to-next-page",
-  "previous": null,
-  "results": [
-    {
-      "id": 10642,
-      "slug": "10642-united-nations-cybercrime-convention",
-      "title": "United Nations cybercrime convention",
-      "type": {
-        "id": 33,
-        "name": "Cybersecurity regulation"
-      },
-      "status": {
-        "id": 1,
-        "name": "under deliberation"
-      },
-      "latest_event": {
-        "id": 21969,
-        "slug": "21969-announced-united-nations-draft-cybercrime-convention",
-        "title": "Reached agreement on draft United Nations convention against cybercrime",
-        "description": "On 9 August 2024, the United Nations (UN) Office on Drugs and Crime (UNODC) announced that the Member States had finalised the draft cybercrime convention, aiming to strengthen international cooperation in combating cybercrime. The convention will b…",
-        "date": "2024-08-09",
-        "type": {
-          "id": 6,
-          "name": "treaty"
-        },
-        "action_type": {
-          "id": 16,
-          "name": "passage",
-          "current_status": {
-            "id": 1,
-            "name": "under deliberation"
-          }
-        }
-      },
-      "policy_area": {
-        "id": 4,
-        "slug": "data-governance",
-        "name": "Data governance",
-        "name_short": "Data governance"
-      },
-      "economic_activities": [
-        {
-          "id": 1,
-          "slug": "cross-cutting",
-          "name": "cross-cutting"
-        }
-      ],
-      "policies": [
-        {
-          "id": 4,
-          "slug": "data-governance",
-          "name": "Data governance",
-          "name_short": "Data governance"
-        }
-      ],
-      "implementers": [
-        {
-          "id": 1129,
-          "slug": "un-members",
-          "name": "UN members"
-        }
-      ]
-    },
-    {...},
-    {...}
-  ]
-}
+[
+ {
+    "id": 20442,
+    "title": "Adopted Second Edition Model AI Governance Framework",
+    "url": "https://digitalpolicyalert.org/event/20442-adopted-model-ai-governance-framework-for-generative-ai",
+    "description": "On 21 January 2020, the Infocomm Media Development Authority (IMDA) of Singapore, together with the Personal Data Privacy Commission (PDPC) and in collaboration with the World Economic Forum (WEF), adopted the Second Edition Model AI Governance Framework. The Governance Framework updates the First Edition Model AI Governance Framework, adopted in 2019, [...]",
+    "date": "2020-01-21",
+    "status": "adopted",
+    "event_type": "outline",
+    "action_type": "adoption",
+    "implementers": [
+      {
+        "name": "Singapore",
+        "id": 702
+      }
+    ],
+    "implementer_groups": [],
+    "policy_area": "Design and testing standards",
+    "policy_instrument": "Artificial Intelligence authority governance",
+    "economic_activities": [
+      {
+        "name": "ML and AI development",
+        "id": 9
+      }
+    ],
+    "implementation_level": "national"
+  },
+  {...},
+  {...}
+]
 ```
 
 ## Pagination
