@@ -13,30 +13,35 @@ The Data endpoint allows to extract paginated lists of policies from the GTA dat
 - [Pagination](#pagination)
 
 ## Access
-Please refer to the access information provided to you by the SGEPT team.
+The data endpoint can be accessed via the following request:
+```
+POST https://api.globaltradealert.org/api/v1/dpa/events/
+Content-Type: application/json
+Authorization: APIKey [YOUR_API_KEY]
+```
 
-### Request payload
-The GET request takes in an url encoded string with the following parameters:
+Replace `[YOUR_API_KEY]` with your personal API key.
 
+### Request body
+The request body can contain the following parameters:
 ```
 {
-    "limit": 10,
+    "limit": 100,
     "offset": 0,
-    [additional filters, see below]
-  
+    "request_data": { 
+        "jurisdiction": [32, 840],
+        "period": ["2023-01-01", "2024-01-01"],
+        ...
+    }
 }
 ```
 
 | Key | Description |
 | :--- | :--- |
-| `limit` | Set the size of the result set here. Accepted is any number. |
+| `limit` | Set the size of the result set here. Accepted is any number between 0 and 1000 |
 | `offset` | Use this parameter to paginate through the output, it accepts any number. |
-
-When making a GET request to the endpoint url, append the url encoded string to the endpoint url like so:
-
-```
-GET https://api.globaltradealert.org/dpa/?url-encoded-string
-```
+| `sorting` | This parameter is coming soon. |
+| `request_data` | This parameter accepts an object containing the key-value pairs used as filters. See accepted filters in the [Accepted filters](#accepted-filters) section. |
 
 
 ### Accepted filters
@@ -45,13 +50,13 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 
 | Parameter | Description | Example | Default |
 | :--- | :--- | :--- | :--- |
-| `jurisdiction`| Filters by implementing jurisdictions. Accepted is a list of UN country codes (see value id mappings below). | [1,2,3] | Unfiltered |
-| `activity`| Filters by economic activity, accepted are economic activity ids (see value id mappings below). | [1,2,3] | Unfiltered |
-| `branch`| Filters by government branch, accepted are government branch ids (see value id mappings below). | [1,2,3] | Unfiltered |
+| `implementing_jurisdiction`| Filters by implementing jurisdictions. Accepted is a list of UN country codes (see value id mappings below). | [1,2,3] | Unfiltered |
+| `economic_activity`| Filters by economic activity, accepted are economic activity ids (see value id mappings below). | [1,2,3] | Unfiltered |
+| `government_branch`| Filters by government branch, accepted are government branch ids (see value id mappings below). | [1,2,3] | Unfiltered |
 | `event_type`| Filters by event type, accepted are event type ids (see value id mappings below). | [1,2,3] | Unfiltered |
-| `policy`| Filters by policy areas, accepted are policy area ids (see value id mappings below). | [1,2,3] | Unfiltered |
+| `policy_area`| Filters by policy areas, accepted are policy area ids (see value id mappings below). | [1,2,3] | Unfiltered |
 | `implementation_level`| Filters by implementation levels, accepted are implementation level ids (see value id mappings below). | [1,2,3] | Unfiltered |
-| `period`| Daterange filter defining in which range the latest event occurs. | ['2020-01-01', '2023-01-01'] | Unfiltered |
+| `event_period`| Daterange filter defining in which range the latest event occurs. | ['2020-01-01', '2023-01-01'] | Unfiltered |
 
 
 ### Value id mappings
@@ -451,7 +456,7 @@ The format of the data being returned looks like this:
 
 ## Pagination
 
-The Data endpoints allows to return an unlimited amount of entries. However, please limit the size of a single request to 1000 items, to avoid running into issues. Use the limit and offset parameters to paginate through the output.
+The Data endpoint allows to return a maximum of 1000 entries per request. Use the `limit` and `offset` parameters to paginate through the output.
 
 I.e. to get the first 1000 entries, set the limit to 1000 and the offset to 0. To get the next 1000 entries, set the limit to 1000 and the offset to 1000, and so forth.
 
