@@ -6,7 +6,7 @@ The Data endpoint allows to extract paginated lists of policies from the GTA dat
 ## Table of contents<!-- omit from toc --> 
 
 - [Access](#access)
-  - [Request payload](#request-payload)
+  - [Request body](#request-body)
   - [Accepted filters](#accepted-filters)
   - [Value id mappings](#value-id-mappings)
 - [Output](#output)
