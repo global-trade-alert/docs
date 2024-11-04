@@ -28,6 +28,7 @@ The request body can contain the following parameters:
 {
     "limit": 100,
     "offset": 0,
+    "sorting": "-date_announced",
     "request_data": { 
         "jurisdiction": [32, 840],
         "period": ["2023-01-01", "2024-01-01"],
@@ -40,7 +41,7 @@ The request body can contain the following parameters:
 | :--- | :--- |
 | `limit` | Set the size of the result set here. Accepted is any number between 0 and 1000 |
 | `offset` | Use this parameter to paginate through the output, it accepts any number. |
-| `sorting` | This parameter is coming soon. |
+| `sorting` | Define the parameters you would like to sort the output by, accepted is `id`, `date`, `status`, `type`, `action_type`. Combine multiple order clauses together in the same string by separating them via a comma, e.g. `date,type`. Reverse the order by adding a `-` in front of the order clause you want to reverse, e.g. `-date` |
 | `request_data` | This parameter accepts an object containing the key-value pairs used as filters. See accepted filters in the [Accepted filters](#accepted-filters) section. |
 
 
