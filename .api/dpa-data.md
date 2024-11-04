@@ -28,7 +28,7 @@ The request body can contain the following parameters:
 {
     "limit": 100,
     "offset": 0,
-    "sorting": "-date_announced",
+    "sorting": "-date",
     "request_data": { 
         "jurisdiction": [32, 840],
         "period": ["2023-01-01", "2024-01-01"],
