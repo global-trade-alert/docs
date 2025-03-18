@@ -82,7 +82,9 @@ The Data endpoint accepts a variety of filters to narrow down the output.
 | `lag_adjustment`| Datestring that filters interventions based on a lag date. Interventions with publishing date after the yearly lag date are excluded. The year component of this datevalue is ignored. | '2023-03-05' | Unfiltered |
 
 ## Output
-The format of the data being returned looks like this:
+
+### Basic access format
+The format of the data being returned for users with basic access rights looks like this:
 
 ```
 [
@@ -165,6 +167,108 @@ The format of the data being returned looks like this:
   {...}
 ]
 ```
+### Full access format
+For users with full access rights, additional fields are being outputted by the endpoint. Please note, that the format of the `affected_products` field changes when access rights change. The output thus looks like this:
+
+```
+[
+{
+    "intervention_id": 138295,
+    "state_act_id": 87754,
+    "state_act_title": "EU: Changes to the list of agricultural and industrial products subject to a reduction of import duties (July 2024)",
+    "intervention_description": "<p>On 4 July 2024, the European Union adopted Council Regulation (EU) 2024/1851 increasing&nbsp;the import duties of 49 agricultural and industrial products enclosed in 20 six-digit tariff subheadings. Specifically, the regulation eliminates these goods from the list of products with a temporary customs duty suspension.&nbsp;The measure enters into force retroactively on 1 July 2024.</p>\r\n<p>Among the affected products there are&nbsp;several chemical and pharmaceutical products, fertilisers and plastics. According to the WTO Tariff Download Facility, the new duties, i.e. the MFN duties, range from 0.7% to 6.5%. The preferential duties still exclude imports from Russia and Belarus.&nbsp;</p>\r\n<p>The Regulation amends&nbsp;Council Regulation (EU) 2023/2890 of December 2023. According to its text, the objective is \"to ensure a sufficient and uninterrupted supply of certain agricultural and industrial products which are not produced in the Union and thereby avoid any disturbances on the market for those products\".&nbsp;</p>\r\n<p>The regulation also adds other&nbsp;goods to the list of products with a temporary customs duty suspension (see related intervention).&nbsp;</p>",
+    "intervention_url": "https://www.globaltradealert.org/intervention/138295",
+    "state_act_url": "https://www.globaltradealert.org/state-act/87754",
+    "state_act_source": "Official Journal of the EU - EUR-Lex (4 July 2024). Council Regulation (EU) 2024/1851 of 25 June 2024 amending Regulation (EU) 2021/2278 suspending the Common Customs Tariff duties referred to in Article 56(2), point (c), of Regulation (EU) No 952/2013 of the European Parliament and of the Council on certain agricultural and industrial products:\r\nhttps://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401851\r\n\r\nOfficial Journal of the EU - EUR-Lex (29 December 2023). Council Regulation (EU) 2023/2890 of 19 December 2023 amending Regulation (EU) 2021/2278 suspending the Common Customs Tariff duties referred to in Article 56(2), point (c), of Regulation (EU) No 952/2013 on certain agricultural and industrial products:\r\nhttps://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R2890&qid=1693489952256\r\n\r\nWTO Tariff Download Facility. Accessed June 2024: http://tariffdata.wto.org/Default.aspx",
+    "is_official_source": true,
+    "gta_evaluation": "Red",
+    "implementing_jurisdictions": [
+      {
+        "id": 40,
+        "name": "Austria",
+        "iso": "AUT"
+      },
+      {
+        "id": 56,
+        "name": "Belgium",
+        "iso": "BEL"
+      },
+      {
+        "id": 100,
+        "name": "Bulgaria",
+        "iso": "BGR"
+      },
+      
+    ],
+    "implementing_jurisdiction_groups": [
+      {
+        "name": "European Union"
+      }
+    ],
+    "affected_jurisdictions": [
+      {
+        "id": 32,
+        "name": "Argentina",
+        "iso": "ARG"
+      },
+      {
+        "id": 36,
+        "name": "Australia",
+        "iso": "AUS"
+      },
+      {
+        "id": 84,
+        "name": "Belize",
+        "iso": "BLZ"
+      },
+      ...
+    ],
+    "implementation_level": "Supranational",
+    "eligible_firm": "all",
+    "intervention_type": "Import tariff",
+    "mast_chapter": "Tariff measures",
+    "mast_subchapter": "Tariff measures",
+    "affected_sectors": [
+      341,
+      352,
+      379,
+      346,
+      369,
+      469,
+      354
+    ],
+    "affected_products": [
+      {
+        "product_id": 292149,
+        "prior_level": "3.5",
+        "new_level": "6.5",
+        "unit": null
+      },
+      {
+        "product_id": 292229,
+        "prior_level": "0",
+        "new_level": "6.5",
+        "unit": null
+      },
+      {
+        "product_id": 292429,
+        "prior_level": "0",
+        "new_level": "3.3",
+        "unit": null
+      },
+      ...
+    ],
+    "date_announced": "2024-07-04",
+    "date_published": "2024-07-08",
+    "date_implemented": "2024-07-01",
+    "date_removed": null,
+    "is_in_force": 1
+  },
+  {...},
+  {...}
+]
+```
+
 
 ## Pagination
 
