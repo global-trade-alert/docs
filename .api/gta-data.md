@@ -168,7 +168,17 @@ The format of the data being returned for users with basic access rights looks l
 ]
 ```
 ### Full access format
-For users with full access rights, additional fields are being outputted by the endpoint. Please note, that the format of the `affected_products` field changes when access rights change. The output thus looks like this:
+For users with full access rights, additional fields are being outputted by the endpoint. Please note, that the format of the following fields changes when access rights change:
+
+- `affected_products`: This field now outputs an array of objects each including the product id, prior and new levels, as well as the unit of those levels if applicable.
+  
+Additionally, the following fields are added as well: 
+
+- `intervention_description`: Intervention description as can be found on our website.
+- `state_act_source`: Source information as can be found on our website.
+- `is_official_source` Boolean indicator whether this state act is based on an official source or not.
+
+The output thus looks like this:
 
 ```
 [
