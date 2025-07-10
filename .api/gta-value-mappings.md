@@ -336,6 +336,12 @@ This file contains the value-id mappings for the different filters accepted by t
 | Local operations incentive | 66 |
 | Local labour incentive | 67 |
 | Localisation, nes | 68 |
+| Voluntary export-restraint arrangements | 69 |
+| Voluntary export-price restraints | 70 |
+| Minimum import price | 71 |
+| Import price benchmark | 72 |
+| Other import charges | 73 |
+| Export price benchmark | 74 |
 
 ## MAST chapters
 | Value | ID |
