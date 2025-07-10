@@ -136,6 +136,7 @@ The format of the data being returned for users with basic access rights looks l
       },
       ...
     ],
+    "inferred_jurisdictions": "Inferred",
     "implementation_level": "Supranational",
     "eligible_firm": "all",
     "intervention_type": "Import tariff",
@@ -233,6 +234,7 @@ The output thus looks like this:
       },
       ...
     ],
+    "inferred_jurisdictions": "Inferred",
     "implementation_level": "Supranational",
     "eligible_firm": "all",
     "intervention_type": "Import tariff",
